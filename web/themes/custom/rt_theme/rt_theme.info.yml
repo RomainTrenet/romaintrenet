@@ -1,0 +1,12 @@
+name: RT Theme
+type: theme
+description: 'Sous-thème natif'
+core_version_requirement: ^11
+base theme: stable9
+
+libraries:
+  - rt_theme/global
+
+components:
+  namespaces:
+    rt_theme: components

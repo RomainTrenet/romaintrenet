@@ -1,0 +1,158 @@
+#ddev-generated
+# If you remove the ddev-generated line above you
+# are responsible for maintaining this file. DDEV will not then
+# update it, for example if you add `additional_hostnames`, etc.
+
+http:
+  routers:
+    starterkit-trenet-redis-commander-1358-http:
+      entrypoints:
+        - http-1358
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-redis-commander-1358"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "starterkit-trenet-redirectHttps"
+    starterkit-trenet-varnish-80-http:
+      entrypoints:
+        - http-80
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-varnish-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "starterkit-trenet-redirectHttps"
+    starterkit-trenet-web-8025-http:
+      entrypoints:
+        - http-8025
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-web-8025"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "starterkit-trenet-redirectHttps"
+    starterkit-trenet-xhgui-80-http:
+      entrypoints:
+        - http-8143
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-xhgui-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "starterkit-trenet-redirectHttps"
+    starterkit-trenet-adminer-8080-http:
+      entrypoints:
+        - http-9100
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`)|| HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-adminer-8080"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "starterkit-trenet-redirectHttps"
+    
+    
+    starterkit-trenet-redis-commander-1358-https:
+      entrypoints:
+        - http-1359
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-redis-commander-1358"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    starterkit-trenet-varnish-80-https:
+      entrypoints:
+        - http-443
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-varnish-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    starterkit-trenet-web-8025-https:
+      entrypoints:
+        - http-8026
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-web-8025"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    starterkit-trenet-xhgui-80-https:
+      entrypoints:
+        - http-8142
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-xhgui-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    starterkit-trenet-adminer-8080-https:
+      entrypoints:
+        - http-9101
+      rule: HostRegexp(`^starterkit-trenet\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-localprod\.ddev\.site$`) || HostRegexp(`^starterkit-trenet-staging\.ddev\.site$`)
+      
+      service: "starterkit-trenet-adminer-8080"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+
+  middlewares:
+    starterkit-trenet-redirectHttps:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    starterkit-trenet-redis-commander-1358:
+      loadbalancer:
+        servers:
+          - url: http://ddev-starterkit-trenet-redis-commander:1358
+        
+    
+    starterkit-trenet-varnish-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-starterkit-trenet-varnish:80
+        
+    
+    starterkit-trenet-web-8025:
+      loadbalancer:
+        servers:
+          - url: http://ddev-starterkit-trenet-web:8025
+        
+    
+    starterkit-trenet-xhgui-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-starterkit-trenet-xhgui:80
+        
+    
+    starterkit-trenet-adminer-8080:
+      loadbalancer:
+        servers:
+          - url: http://ddev-starterkit-trenet-adminer:8080
+        
+    
+    
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/starterkit-trenet.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/starterkit-trenet.key

@@ -5,7 +5,7 @@ global:
   js:
     dist/js/common.js: {}
   dependencies:
-    - mc_theme/base
+    - rt_theme/base
 
 base:
   css:

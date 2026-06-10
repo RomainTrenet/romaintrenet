@@ -1,8 +1,0 @@
-name: 'MC Native'
-description: 'Installe les modules spécifiques à un site basé sur un thème natif'
-type: 'Custom'
-recipes:
-  - mc_core
-config:
-  # Allow config import to continue if config already exists.
-  strict: false
