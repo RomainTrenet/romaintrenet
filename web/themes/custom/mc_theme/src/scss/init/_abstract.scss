@@ -1,0 +1,28 @@
+/**
+ * @file
+ * For abstract methods, no CSS goes here.
+ *
+ * Description plus détaillée (optionnelle) :
+ * - Ce que contient le fichier (variables, mixins, styles globaux…)
+ * - Comment il est censé être utilisé
+ * - À quels autres fichiers il est lié (imports, forward, etc.)
+ *
+ * @group NomDuGroupe (optionnel)
+ * @author VotreNom (optionnel)
+ * @see Autres fichiers ou liens utiles (optionnel)
+ */
+
+@use "colors" as *;
+@use "mixins" as *;
+
+/* ===================================================================
+ * + Close button abstract class, EXAMPLE.
+ * ===================================================================
+ */
+%btn-close {
+  color: $example-close-color;
+
+  @include hover-focus-active {
+    color: $example-close-color-hover;
+  }
+}

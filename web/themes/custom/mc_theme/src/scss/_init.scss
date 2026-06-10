@@ -1,0 +1,22 @@
+/**
+ * @file
+ * List of init files, DO NOT WRITE ANYTHING THAT WRITE CSS HERE, just variables, mixin, abstract.
+ *
+ * Description plus détaillée (optionnelle) :
+ * - Ce que contient le fichier (variables, mixins, styles globaux…)
+ * - Comment il est censé être utilisé
+ * - À quels autres fichiers il est lié (imports, forward, etc.)
+ *
+ * @group NomDuGroupe (optionnel)
+ * @author VotreNom (optionnel)
+ * @see Autres fichiers ou liens utiles (optionnel)
+ */
+
+/* ===================================================================
+ * + Init. Take care, abstract use colors and mixins.
+ * ===================================================================
+ */
+@forward "init/variables";
+@forward "init/colors";
+@forward "init/mixins";
+@forward "init/abstract";

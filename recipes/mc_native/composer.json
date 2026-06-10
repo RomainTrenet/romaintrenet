@@ -1,0 +1,22 @@
+{
+    "name": "mc/mc_native",
+    "description": "Installs and configures the MC starterkit with native theme.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "MC SNUM",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "mc/mc_core": "*"
+    },
+    "extra": {
+        "drupal-recipe": {
+            "paths": [
+                "recipe.yml"
+            ]
+        }
+    }
+}

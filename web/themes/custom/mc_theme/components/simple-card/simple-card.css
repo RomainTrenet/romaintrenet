@@ -1,0 +1,15 @@
+.simple-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.simple-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.simple-card__description {
+  color: #555;
+  margin: 0;
+}

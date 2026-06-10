@@ -1,0 +1,18 @@
+global:
+  css:
+    theme:
+      dist/css/common.css: {}
+  js:
+    dist/js/common.js: {}
+  dependencies:
+    - mc_theme/base
+
+base:
+  css:
+    theme:
+      dist/css/base/base.css: {}
+
+node--page--full:
+  css:
+    theme:
+      dist/css/content/node--page--full.css: {}

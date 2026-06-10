@@ -1,0 +1,11 @@
+name: 'MC Tarte au citron JS'
+type: module
+description: 'Injects Tarteaucitron script with configurable paths and admin exclusion.'
+core_version_requirement: ^9 || ^10 || ^11
+package: 'Ministère de la culture'
+configure: mc_tacjs.admin_settings
+project: mc_tacjs
+'interface translation project': mc_tacjs
+'interface translation server pattern': modules/custom/%project/translations/%project.%language.po
+dependencies:
+  - path_alias

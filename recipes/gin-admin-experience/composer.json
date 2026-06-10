@@ -1,0 +1,18 @@
+{
+    "name": "kanopi/gin-admin-experience",
+    "description": "Installs and configures the Gin admin theme and supporting base modules.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Jim Birch",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/core": "^11.2",
+        "drupal/gin": "^5",
+        "drupal/gin_login": "^2.1",
+        "drupal/navigation_extra_tools": "^1.0"
+    }
+}

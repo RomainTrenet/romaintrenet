@@ -1,0 +1,15 @@
+name: Simple card
+description: "Un composant simple affichant un titre et une description."
+props:
+  type: object
+  properties:
+    title:
+      type: string
+    description:
+      type: string
+  required:
+    - title
+template: simple-card.twig
+style:
+  css:
+    component: simple-card.css

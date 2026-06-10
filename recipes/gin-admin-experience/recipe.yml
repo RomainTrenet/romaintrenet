@@ -1,0 +1,35 @@
+name: 'Gin Admin Experience'
+description: 'Installs and configures the Gin admin theme and supporting modules.'
+type: 'Site'
+install:
+  # Install core dependencies.
+  - block
+  - config
+  - help
+  # Install Claro as it is a dependency of Gin, but don't import config.
+  - claro
+  # Install Gin theme and base modules that extend it.
+  - gin
+  - gin_login
+  # Install Layout Builder as it is a dependency of Navigation.
+  - layout_builder
+  # Install Navigation Modules.
+  - navigation
+  - navigation_extra_tools
+config:
+  # Allow config import to continue if config already exists.
+  strict: false
+  import:
+    # Import all of Navigation modules config.
+    navigation: '*'
+    # Import all of Gin and Gin Login's config.
+    gin: '*'
+    gin_login: '*'
+  actions:
+    # Update the admin theme to Gin in Theme settings.
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin

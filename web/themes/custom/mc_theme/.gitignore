@@ -1,0 +1,8 @@
+# To be removed for a new project.
+package-lock.json
+
+# Dist folder, build by Vite.
+dist
+
+# NPM libraries.
+node_modules

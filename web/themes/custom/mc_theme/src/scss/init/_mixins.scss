@@ -1,0 +1,91 @@
+/**
+ * @file
+ * For colors variables, no CSS goes here.
+ *
+ * Description plus détaillée (optionnelle) :
+ * - Ce que contient le fichier (variables, mixins, styles globaux…)
+ * - Comment il est censé être utilisé
+ * - À quels autres fichiers il est lié (imports, forward, etc.)
+ *
+ * @group NomDuGroupe (optionnel)
+ * @author VotreNom (optionnel)
+ * @see Autres fichiers ou liens utiles (optionnel)
+ */
+
+@use "variables" as *;
+@use "sass:math";
+
+/* ===================================================================
+ * + Hover focus active mixin.
+ *
+ *  Shortcut styling :hover, :active, :focus states
+ *  Can be used for more than links
+ *  Based on  https://gist.github.com/jayontraps/dee1da27b94f37c0768d#file-sass-mixin-hover-active-focus
+ * ===================================================================
+ */
+@mixin hover-focus-active () {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+/* ===================================================================
+ * + Grid mixins.
+ * ===================================================================
+ */
+@mixin breakpoint-up($name) {
+  @media (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// A vérifier.
+@mixin breakpoint-down($name) {
+  $next: null;
+
+  // Trouver le breakpoint qui vient après celui demandé
+  @each $key, $value in $breakpoints {
+    @if $next == null and $key == $name {
+      $next: true;
+    } @else if $next == true {
+      $next: $value;
+      @break;
+    }
+  }
+
+  // Si on est au dernier breakpoint, max-width = rien → donc max-width infini
+  @if $next == true {
+    // Aucun breakpoint suivant, donc on utilise juste max-width: le breakpoint demandé
+    @media (max-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    // Sinon, la limite supérieure est (breakpoint suivant - 0.02px) comme Bootstrap
+    @media (max-width: ($next - 0.02px)) {
+      @content;
+    }
+  }
+}
+
+// Row
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-#{$gutter} / 2);
+  margin-right: calc(-#{$gutter} / 2);
+}
+
+// Col base
+@mixin col {
+  padding-left: calc(#{$gutter} / 2);
+  padding-right: calc(#{$gutter} / 2);
+  flex: 1 0 0;
+}
+
+// Col sized
+@mixin col-size($n) {
+  flex: 0 0 math.div($n, $grid-columns);
+  max-width: math.div($n, $grid-columns);
+}

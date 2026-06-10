@@ -1,0 +1,12 @@
+services:
+  mc_tacjs.helper:
+    class: Drupal\mc_tacjs\Helper\McTacjsHelper
+    arguments:
+      - '@config.factory'
+      - '@router.admin_context'
+      - '@path.current'
+      - '@path_alias.manager'
+  mc_tacjs.route_subscriber:
+    class: Drupal\mc_tacjs\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

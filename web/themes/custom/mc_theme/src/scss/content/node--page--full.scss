@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Doit contenir le style pour un contenu de type page, en mode d'affichage complet.
+ *
+ * Description plus détaillée (optionnelle) :
+ * - Ce que contient le fichier (variables, mixins, styles globaux…)
+ * - Comment il est censé être utilisé
+ * - À quels autres fichiers il est lié (imports, forward, etc.)
+ *
+ * @group NomDuGroupe (optionnel)
+ * @author VotreNom (optionnel)
+ * @see Autres fichiers ou liens utiles (optionnel)
+ */
+
+@use "../init" as *;
+
+/* ===================================================================
+ * + EXAMPLE. Page node type, full view mode.
+ * ===================================================================
+ */
+.node--page--full {
+  //background-color: #3558a2;
+}

@@ -1,0 +1,18 @@
+langcode: fr
+status: false
+dependencies: { }
+id: development_config
+label: Développement
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/envs/dev
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list: {  }
+partial_list:
+  - system.performance

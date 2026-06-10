@@ -1,0 +1,18 @@
+langcode: fr
+status: false
+dependencies: { }
+id: prod_config
+label: Production
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/envs/prod
+module:
+  matomo: 0
+  openid_connect: 0
+  eulerian: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

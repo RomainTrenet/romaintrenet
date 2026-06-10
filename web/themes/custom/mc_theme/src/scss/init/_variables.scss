@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Variables, no CSS goes here.
+ *
+ * Description plus détaillée (optionnelle) :
+ * - Ce que contient le fichier (variables, mixins, styles globaux…)
+ * - Comment il est censé être utilisé
+ * - À quels autres fichiers il est lié (imports, forward, etc.)
+ *
+ * @group NomDuGroupe (optionnel)
+ * @author VotreNom (optionnel)
+ * @see Autres fichiers ou liens utiles (optionnel)
+ */
+
+/* ===================================================================
+ * + Layout : grid, gutter variables.
+ *
+ *  Shortcut styling :hover, :active, :focus states
+ *  Can be used for more than links
+ *  Based on  https://gist.github.com/jayontraps/dee1da27b94f37c0768d#file-sass-mixin-hover-active-focus
+ * ===================================================================
+ */
+// Nombre total de colonnes
+$grid-columns: 12;
+
+// Largeurs max (container)
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Gutter
+$gutter: 1.5rem;

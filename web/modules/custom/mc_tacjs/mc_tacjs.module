@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\mc_tacjs\Helper\McTacjsHelper;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function mc_tacjs_page_attachments(array &$attachments): void {
+  $helper = \Drupal::service('mc_tacjs.helper');
+  $url = $helper->getTacJsUrl();
+
+  if ($url && $helper->shouldLoadScript()) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'script',
+        '#attributes' => [
+          'src' => $url,
+        ],
+        '#weight' => 1000,
+      ],
+      'mc_tacjs_script',
+    ];
+  }
+
+}

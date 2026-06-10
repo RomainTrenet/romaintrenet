@@ -1,0 +1,36 @@
+{
+  "name": "mc_theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vite.config.js",
+  "scripts": {
+    "build": "vite build",
+    "dev:css": "sass --style=expanded --source-map --load-path=node_modules src/scss:dist/css --watch",
+    "dev:js": "vite build --watch --mode=development",
+    "dev": "run-p dev:css dev:js serve",
+    "serve": "browser-sync start --proxy $DDEV_PRIMARY_URL --no-https --files \"dist/**/*\" --port 3001 --ui-port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "autoprefixer": "^10.4.22",
+    "bootstrap": "^5.3.8",
+    "fast-glob": "^3.3.3",
+    "postcss": "^8.5.6",
+    "sass": "^1.94.2",
+    "vite": "^7.2.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "browser-sync-webpack-plugin": "^2.4.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 10 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

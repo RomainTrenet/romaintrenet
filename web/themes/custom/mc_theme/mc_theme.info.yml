@@ -1,0 +1,12 @@
+name: MC Theme
+type: theme
+description: 'Sous-thème natif de starterkit-culture'
+core_version_requirement: ^11
+base theme: ui_suite_dsfr
+
+libraries:
+  - mc_theme/global
+
+components:
+  namespaces:
+    mc_theme: components

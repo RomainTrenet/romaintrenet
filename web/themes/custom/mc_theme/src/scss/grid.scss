@@ -1,0 +1,15 @@
+@use "init" as *;
+
+.row {
+  @include row;
+}
+
+.col {
+  @include col;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include col-size($i);
+  }
+}

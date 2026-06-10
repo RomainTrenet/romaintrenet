@@ -1,0 +1,78 @@
+# French translation of the MC Opensearch integration module.
+msgid ""
+msgstr ""
+"Project-Id-Version: 9.1\n"
+"POT-Creation-Date: 2025-07-02 17:18+0200\n"
+"PO-Revision-Date: 2025-07-02 17:18+0200\n"
+"Last-Translator: User <user@gmail.com>\n"
+"Language-Team: French <user@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgctxt "MC TAC JS"
+msgid "Administer MC TAC JS"
+msgstr "Administrer MC TAC JS"
+
+msgctxt "MC TAC JS"
+msgid "Manage TAC JS configuration for the Ministère de la Culture."
+msgstr "Gérer la configuration du script TAC JS pour le Ministère de la Culture."
+
+msgid "\"Tarte au citron\" JS"
+msgstr "JS \"Tarte au citron\""
+
+msgid "\"Tarte au citron\" for Ministère de la Culture"
+msgstr "\"Tarte au citron\" pour le Ministère de la Culture"
+
+msgid "These parameters are used to call a script « Tarte au citron ». This requires a script address, a domain, and a UUID.<br>The result is, for example: <i>https://tarteaucitron.io/load.js?domain=my.domain.fr&uuid=the_uuid<i>"
+msgstr "Ces paramètres visent à appeler un script « Tarte au citron ». Cela requiert une adresse de script, un domaine, et un UUID.<br>Le résultat est par exemple : <i>https://tarteaucitron.io/load.js?domain=my.domain.fr&uuid=the_uuid<i>"
+
+msgid "The \"Tarte au citron\" script to call, usually <i>https://tarteaucitron.io/load.js</i>"
+msgstr "Le script \"Tarte au citron\" à appeler, en général <i>https://tarteaucitron.io/load.js</i>"
+
+msgctxt "MC TAC JS"
+msgid "Domain"
+msgstr "Domaine"
+
+msgctxt "MC TAC JS"
+msgid "Script"
+msgstr "Script"
+
+msgctxt "MC TAC JS"
+msgid "UUID"
+msgstr "UUID"
+
+msgctxt "MC TAC JS"
+msgid "Enable tracking on certain pages"
+msgstr "Activer le suivi sur certaines pages"
+
+msgid "Choose whether to include or exclude the listed paths."
+msgstr "Choisissez d'inclure ou d'exclure les chemins listés."
+
+msgctxt "MC TAC JS"
+msgid "All pages except those listed"
+msgstr "Toutes les pages sauf celles listées"
+
+msgctxt "MC TAC JS"
+msgid "Only the listed pages"
+msgstr "Seulement les pages listées"
+
+msgctxt "MC TAC JS"
+msgid "Paths"
+msgstr "Chemins"
+
+msgid "Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard.\nExample paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page. Example: <br><code>/batch</code><br><code>/node/add*</code><br><code>/node/*/*</code><br><code>/user/*/*</code>"
+msgstr "Indiquez les pages en utilisant leurs chemins. Entrez un chemin par ligne. Le caractère '*' est un joker.\nExemples de chemins : %blog pour la page blog, %blog-wildcard pour tous les blogs personnels, et %front pour la page d’accueil. Exemple : <br><code>/batch</code><br><code>/node/add*</code><br><code>/node/*/*</code><br><code>/user/*/*</code>"
+
+msgctxt "MC TAC JS"
+msgid "Exclude administration pages"
+msgstr "Exclure les pages d'administration"
+
+msgctxt "MC TAC JS"
+msgid "Visibility"
+msgstr "Visibilité"
+
+msgctxt "MC TAC JS"
+msgid "Tracking"
+msgstr "Suivi"
