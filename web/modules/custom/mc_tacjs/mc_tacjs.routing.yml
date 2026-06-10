@@ -1,9 +1,0 @@
-mc_tacjs.admin_settings:
-  path: '/admin/config/system/mc_tacjs'
-  defaults:
-    _form: '\Drupal\mc_tacjs\Form\TacJsConfigurationForm'
-    _title: 'Tarte au citron'
-  requirements:
-    _permission: 'administer site configuration'
-  options:
-    _admin_route: TRUE

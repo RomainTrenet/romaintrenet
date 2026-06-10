@@ -1,6 +1,0 @@
-mc_tacjs.admin_settings:
-  title: '"Tarte au citron" JS'
-  description: '"Tarte au citron" for Ministère de la Culture'
-  parent: system.admin_config_system
-  route_name: mc_tacjs.admin_settings
-  weight: 0

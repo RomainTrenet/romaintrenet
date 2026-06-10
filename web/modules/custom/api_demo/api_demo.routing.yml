@@ -1,0 +1,7 @@
+api_demo.post:
+  path: '/api-demo/post/{id}'
+  defaults:
+    _controller: '\Drupal\api_demo\Controller\ApiDemoController::post'
+  requirements:
+    _permission: 'access content'
+    id: '\d+'

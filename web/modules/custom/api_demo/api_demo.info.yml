@@ -1,0 +1,5 @@
+name: API Demo
+type: module
+description: 'Demo REST client using JSONPlaceholder.'
+core_version_requirement: ^11
+package: Custom
