@@ -1,12 +1,12 @@
-name: starterkit-trenet
+name: romain-trenet
 type: drupal11
 docroot: web
 php_version: "8.3"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames:
-  - starterkit-trenet-staging
-  - starterkit-trenet-localprod
+  - romain-trenet-staging
+  - romain-trenet-localprod
 additional_fqdns: []
 database:
     type: mariadb
@@ -14,7 +14,7 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-nodejs_version: "24"
+nodejs_version: "27"
 corepack_enable: true
 
 # Key features of DDEV's config.yaml:
